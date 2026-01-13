@@ -2,6 +2,21 @@
 
 This repository demonstrates how SQL and spatial databases support real-world GIS analysis. It includes two example PostgreSQL/PostGIS databases, realistic schemas, and sample spatial data that can be queried locally.
 
+## 🗂 Project Structure
+```
+sql-gis-portfolio/
+│
+├── databases/
+│   ├── urban_mobility_schema.sql
+│
+├── queries/
+│   ├── transit_analysis.sql
+│
+├── exports/
+│   ├── export_to_csv.sql
+│   ├── export_to_gpkg.md
+```
+
 ---
 
 ## 1. Prerequisites
