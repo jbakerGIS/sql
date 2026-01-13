@@ -1,4 +1,4 @@
-# GIS SQL Portfolio – PostgreSQL + PostGIS Setup Guide
+# GIS SQL – PostgreSQL + PostGIS Setup Guide
 
 This repository demonstrates how SQL and spatial databases support real-world GIS analysis. It includes two example PostgreSQL/PostGIS databases, realistic schemas, and sample spatial data that can be queried locally.
 
