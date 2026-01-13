@@ -160,13 +160,22 @@ VALUES
 
 Queries can now be run directly from .sql files in VS Code.
 
-8. Example Spatial Query
+## 8. Example Spatial Query
+```sql
 SELECT c.name, COUNT(ts.stop_id) AS stop_count
 FROM cities c
 LEFT JOIN transit_stops ts
   ON ST_DWithin(c.geom::geography, ts.geom::geography, 1000)
 GROUP BY c.name;
-9. Portfolio Notes
+```
+## 9. Exporting Query Results for GIS Use
+Query results from PostgreSQL/PostGIS can be exported for use in desktop GIS software such as ArcGIS Pro. Two common export formats are CSV and GeoPackage.
+
+Export to CSV
+
+CSV exports are useful for tabular summaries or non-spatial results.
+
+## 10. Portfolio Notes
 
 All spatial logic uses PostGIS functions
 
