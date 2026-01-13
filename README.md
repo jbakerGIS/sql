@@ -1,6 +1,6 @@
 # GIS SQL Portfolio – PostgreSQL + PostGIS Setup Guide
 
-This repository demonstrates how SQL and spatial databases support real-world GIS analysis. It includes two example PostgreSQL/PostGIS databases, realistic schemas, and sample spatial data that can be queried locally and showcased on GitHub.
+This repository demonstrates how SQL and spatial databases support real-world GIS analysis. It includes two example PostgreSQL/PostGIS databases, realistic schemas, and sample spatial data that can be queried locally.
 
 ---
 
@@ -141,4 +141,22 @@ VALUES
    * Host: `localhost`
    * Port: `5432`
    * User: `postgres`
-   * Database: `ur
+   * Database: urban_mobility (repeat for environmental_risk)
+
+Queries can now be run directly from .sql files in VS Code.
+
+8. Example Spatial Query
+SELECT c.name, COUNT(ts.stop_id) AS stop_count
+FROM cities c
+LEFT JOIN transit_stops ts
+  ON ST_DWithin(c.geom::geography, ts.geom::geography, 1000)
+GROUP BY c.name;
+9. Portfolio Notes
+
+All spatial logic uses PostGIS functions
+
+Sample data is intentionally small and readable
+
+Queries are written for clarity and storytelling, not volume
+
+This structure mirrors how spatial SQL is used in professional GIS and data engineering workflows.
